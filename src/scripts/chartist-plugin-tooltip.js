@@ -26,13 +26,13 @@
     return function tooltip(chart) {
       var tooltipSelector = options.pointClass;
       if (chart instanceof Chartist.Bar) {
-        tooltipSelector = 'ct-bar';
+        tooltipSelector = chart.options.classNames.bar || 'ct-bar';
       } else if (chart instanceof Chartist.Pie) {
         // Added support for donut graph
         if (chart.options.donut) {
-          tooltipSelector = 'ct-slice-donut';
+          tooltipSelector = chart.options.classNames.chartDonut || 'ct-slice-donut';
         } else {
-          tooltipSelector = 'ct-slice-pie';
+          tooltipSelector = chart.options.classNames.chartPie || 'ct-slice-pie';
         }
       }
 

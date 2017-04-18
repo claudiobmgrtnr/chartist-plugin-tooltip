@@ -10,7 +10,7 @@
     // like Node.
     module.exports = factory(require("chartist"));
   } else {
-    root['Chartist.plugins.tooltips'] = factory(Chartist);
+    root['Chartist.plugins.tooltip'] = factory(Chartist);
   }
 }(this, function (Chartist) {
 
@@ -42,13 +42,13 @@
       return function tooltip(chart) {
         var tooltipSelector = options.pointClass;
         if (chart instanceof Chartist.Bar) {
-          tooltipSelector = 'ct-bar';
+          tooltipSelector = chart.options.classNames.bar || 'ct-bar';
         } else if (chart instanceof Chartist.Pie) {
           // Added support for donut graph
           if (chart.options.donut) {
-            tooltipSelector = 'ct-slice-donut';
+            tooltipSelector = chart.options.classNames.chartDonut || 'ct-slice-donut';
           } else {
-            tooltipSelector = 'ct-slice-pie';
+            tooltipSelector = chart.options.classNames.chartPie || 'ct-slice-pie';
           }
         }
 
@@ -90,7 +90,7 @@
           }
 
           if (options.tooltipFnc && typeof options.tooltipFnc === 'function') {
-            tooltipText = options.tooltipFnc(meta, value, event.target);
+            tooltipText = options.tooltipFnc(meta, value);
           } else {
             if (options.metaIsHTML) {
               var txt = document.createElement('textarea');
@@ -201,6 +201,6 @@
 
   } (window, document, Chartist));
 
-  return Chartist.plugins.tooltips;
+  return Chartist.plugins.tooltip;
 
 }));

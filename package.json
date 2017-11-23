@@ -3,7 +3,7 @@
   "description": "Screen tips Plugin for Chartist.js",
   "version": "0.0.19",
   "author": "Markus Padourek (upgraded by Develoger)",
-  "homepage": "https://github.com/radojesrb/chartist-plugin-tooltip",
+  "homepage": "https://github.com/claudiobmgrtnr/chartist-plugin-tooltip",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/claudiobmgrtnr/chartist-plugin-tooltip.git"
@@ -27,7 +27,7 @@
   "licenses": [
     {
       "type": "MIT",
-      "url": "https://github.com/radojesrb/chartist-plugin-tooltip/blob/master/LICENSE"
+      "url": "https://github.com/claudiobmgrtnr/chartist-plugin-tooltip/blob/master/LICENSE"
     }
   ],
   "dependencies": {},

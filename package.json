@@ -1,7 +1,7 @@
 {
   "name": "chartist-plugin-screentips-custom",
   "description": "Screen tips Plugin for Chartist.js",
-  "version": "0.0.19",
+  "version": "0.0.20",
   "author": "Markus Padourek (upgraded by Develoger)",
   "homepage": "https://github.com/claudiobmgrtnr/chartist-plugin-tooltip",
   "repository": {
